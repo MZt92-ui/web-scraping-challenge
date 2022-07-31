@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mars Scraped Info</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div clas="container">
+        <div class="jumbotron text-center">
+          <strong><h1>Mission to Mars</h1></strong>
+          <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        </div>
+    </div>
+    <div class="container">
+        <strong><h2>Latest News</h2></strong>
+        <h4>{{information.NewsTitle}}</h4>
+        <p>{{information.NewsParagraph}}</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <strong><h2>Featured Mars Image</h2></strong>
+                <img src = {{information.FeaturedImage}} width="300">
+            </div>
+            <div class="col-md-6">
+                <strong><h3>Mars Facts</h3></strong>
+                {{information.FactstTable}}
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <strong><h2>Mars Hemispheres</h2></strong>
+        <div class="image_container">
+            {% for img in information.Hemisphere %} 
+            <img src="{{img.img}}" width="400">
+            <h4>{{img.title}}</h4>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
