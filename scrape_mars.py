@@ -38,7 +38,7 @@ def scrape():
     df.set_index("Mars - Earth Comparison",inplace=True)
 
     # save it to HTML
-    fact_table = df.to_html()
+    fact_table = df.to_html(classes="table table-striped")
 
     # Scrape Hemisphere image
     browser = init_browser()
