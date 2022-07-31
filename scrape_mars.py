@@ -81,7 +81,7 @@ def scrape():
         "NewsTitle":latest_title,
         "NewsParagraph":lates_paragraph,
         "FeaturedImage":featured_img_url,
-        "FactstTable":fact_table,
+        "FactsTable":fact_table,
         "Hemisphere":hemisphere_lis
     }
 
