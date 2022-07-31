@@ -12,35 +12,37 @@
 <body>
     <div clas="container">
         <div class="jumbotron text-center">
-          <strong><h1>Mission to Mars</h1></strong>
+          <h1><strong>Mission to Mars</strong></h1>
           <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
         </div>
     </div>
     <div class="container">
-        <strong><h2>Latest News</h2></strong>
+        <h2><strong>Latest News</strong></h2>
         <h4>{{information.NewsTitle}}</h4>
         <p>{{information.NewsParagraph}}</p>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <strong><h2>Featured Mars Image</h2></strong>
-                <img src = {{information.FeaturedImage}} width="300">
+                <h2><strong>Mars Image</strong> </h2>
+                <img src = {{information.FeaturedImage}} width="500">
             </div>
             <div class="col-md-6">
-                <strong><h3>Mars Facts</h3></strong>
+                <h3><strong>Mars Facts</strong> </h3>
                 {{information.FactsTable}}
             </div>
         </div>
     </div>
     <div class="container">
-        <strong><h2>Mars Hemispheres</h2></strong>
+        <center>
+        <h2><strong>Mars Hemispheres</strong></h2>
         <div class="image_container">
             {% for img in information.Hemisphere %} 
             <img src="{{img.img}}" width="400">
             <h4>{{img.title}}</h4>
             {% endfor %}
         </div>
+        </center>
     </div>
 </body>
 </html>
